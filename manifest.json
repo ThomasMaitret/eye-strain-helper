@@ -1,0 +1,16 @@
+{
+  "name": "Netflix subtitles replacer",
+  "version": "1.0",
+  "description": "Netflix subtitles replacer",
+  "permissions": [
+    "tabs",
+    "storage",
+    "declarativeContent",
+    "https://*.netflix.com/"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
+}
