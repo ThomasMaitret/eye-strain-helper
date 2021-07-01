@@ -4,14 +4,14 @@ const phraseChanges = {
   pote: "reuf",
   coéquipier: "collègue",
   chakra: "mana",
-  Hokage: "Maire",
+  Hokage: "Bukkake",
   Konoha: "Carhaix",
   guere: "bagarre",
-  Mitsuki: "Jérémie",
+  Mitsuki: "Mitsubishi",
   Hinata: "Piñata",
   crâne: "ciboulot",
-  multiclonage: "antidopage",
-  Multiclonage: "Antidopage",
+  multiclonage: "multi-moi",
+  Multiclonage: "Multi-moi",
 };
 
 function changeSubtitles() {
@@ -23,7 +23,7 @@ function changeSubtitles() {
 
       if (firstChild) {
         for (const subtitle of firstChild.childNodes) {
-          replaceAll(subtitle);
+          replaceText(subtitle);
         }
       }
     }
@@ -40,7 +40,7 @@ function changeSubtitles() {
 /**
  * @param {ChildNode} node
  */
-function replaceAll(node) {
+function replaceText(node) {
   const regex = new RegExp(Object.keys(phraseChanges).join("|"), "gi");
   const newText = node.textContent.replace(regex, function (matched) {
     return phraseChanges[matched];
@@ -48,6 +48,7 @@ function replaceAll(node) {
 
   if (newText !== node.textContent) {
     node.textContent = newText;
+    node.style.display = "block";
   }
 }
 
