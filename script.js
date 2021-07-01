@@ -10,6 +10,8 @@ const phraseChanges = {
   Mitsuki: "Jérémie",
   Hinata: "Piñata",
   crâne: "ciboulot",
+  multiclonage: "antidopage",
+  Multiclonage: "Antidopage",
 };
 
 function changeSubtitles() {
