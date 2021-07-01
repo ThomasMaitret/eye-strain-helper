@@ -42,12 +42,12 @@ function changeSubtitles() {
  */
 function replaceText(node) {
   const regex = new RegExp(Object.keys(phraseChanges).join("|"), "gi");
-  const newText = node.textContent.replace(regex, function (matched) {
+  const newText = node.innerHTML.replace(regex, function (matched) {
     return phraseChanges[matched];
   });
 
-  if (newText !== node.textContent) {
-    node.textContent = newText;
+  if (newText !== node.innerHTML) {
+    node.innerHTML = newText;
   }
 }
 
