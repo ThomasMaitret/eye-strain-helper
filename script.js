@@ -6,7 +6,7 @@ const phraseChanges = {
   chakra: "mana",
   Hokage: "Bukkake",
   Konoha: "Carhaix",
-  guere: "bagarre",
+  guerre: "bagarre",
   Mitsuki: "Mitsubishi",
   Hinata: "Piñata",
   crâne: "ciboulot",
@@ -48,7 +48,6 @@ function replaceText(node) {
 
   if (newText !== node.textContent) {
     node.textContent = newText;
-    node.style.display = "block";
   }
 }
 
