@@ -10,8 +10,16 @@ const phraseChanges = {
   Mitsuki: "Mitsubishi",
   Hinata: "Piñata",
   crâne: "ciboulot",
-  multiclonage: "multi-moi",
-  Multiclonage: "Multi-moi",
+  multiclonage: "antidopage",
+  Multiclonage: "Antidopage",
+  raiton: "raton",
+  Raiton: "Raton",
+  caton: "chaton",
+  Caton: "Chaton",
+  feu: "poil",
+  tête: "caboche",
+  combat: "conflit",
+  duel: "match",
 };
 
 function changeSubtitles() {
