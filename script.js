@@ -4,7 +4,6 @@ const phraseChanges = {
   pote: "reuf",
   coéquipier: "collègue",
   chakra: "mana",
-  Hokage: "Bukkake",
   Konoha: "Carhaix",
   guerre: "bagarre",
   Mitsuki: "Mitsubishi",
@@ -14,12 +13,17 @@ const phraseChanges = {
   Multiclonage: "Antidopage",
   raiton: "raton",
   Raiton: "Raton",
-  caton: "chaton",
-  Caton: "Chaton",
+  katon: "chaton",
+  Katon: "Chaton",
   feu: "poil",
   tête: "caboche",
   combat: "conflit",
   duel: "match",
+  épée: "algue",
+  Sharingan: "Sida",
+  Naruto: "Norauto™",
+  père: "daron",
+  kage: "cagole",
 };
 
 function changeSubtitles() {
@@ -49,7 +53,7 @@ function changeSubtitles() {
  * @param {ChildNode} node
  */
 function replaceText(node) {
-  const regex = new RegExp(Object.keys(phraseChanges).join("|"), "gi");
+  const regex = new RegExp(Object.keys(phraseChanges).join("|"), "g");
   const newText = node.innerHTML.replace(regex, function (matched) {
     return phraseChanges[matched];
   });
