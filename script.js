@@ -1,31 +1,3 @@
-let phraseChanges = {
-  sabre: "pénis",
-  Boruto: "Burrito",
-  pote: "reuf",
-  coéquipier: "collègue",
-  chakra: "mana",
-  Konoha: "Carhaix",
-  guerre: "bagarre",
-  Mitsuki: "Mitsubishi",
-  Hinata: "Piñata",
-  crâne: "ciboulot",
-  multiclonage: "antidopage",
-  Multiclonage: "Antidopage",
-  raiton: "raton",
-  Raiton: "Raton",
-  katon: "chaton",
-  Katon: "Chaton",
-  feu: "poil",
-  tête: "caboche",
-  combat: "conflit",
-  duel: "match",
-  épée: "algue",
-  Sharingan: "Sida",
-  Naruto: "Norauto™",
-  père: "daron",
-  kage: "cagole",
-};
-
 function changeSubtitles() {
   const callback = () => {
     const subtitles = document.querySelector(".player-timedtext");
@@ -53,7 +25,30 @@ function changeSubtitles() {
  * @param {ChildNode} node
  */
 function replaceText(node) {
-  const words = node.innerHTML.match(/\b(\w+)\b/g);
+  const phraseChanges = {
+    sabre: "pénis",
+    Boruto: "Burrito",
+    pote: "reuf",
+    coéquipier: "collègue",
+    chakra: "mana",
+    Konoha: "Carhaix",
+    guerre: "bagarre",
+    Mitsuki: "Mitsubishi",
+    Hinata: "Piñata",
+    crâne: "ciboulot",
+    multiclonage: "antidopage",
+    Multiclonage: "Antidopage",
+    katon: "chaton",
+    Katon: "Chaton",
+    feu: "poil",
+    tête: "caboche",
+    duel: "match",
+    Sharingan: "Sida",
+    Naruto: "Norauto™",
+    père: "daron",
+  };
+
+  const words = node.innerHTML.match(/[A-zÀ-ÿ]+(|\s+)/gi);
   // eslint-disable-next-line unicorn/prefer-spread
   let newText = node.innerHTML.slice();
 
