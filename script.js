@@ -1,4 +1,4 @@
-const phraseChanges = {
+let phraseChanges = {
   sabre: "pénis",
   Boruto: "Burrito",
   pote: "reuf",
@@ -53,10 +53,15 @@ function changeSubtitles() {
  * @param {ChildNode} node
  */
 function replaceText(node) {
-  const regex = new RegExp(Object.keys(phraseChanges).join("|"), "g");
-  const newText = node.innerHTML.replace(regex, function (matched) {
-    return phraseChanges[matched];
-  });
+  const words = node.innerHTML.match(/\b(\w+)\b/g);
+  // eslint-disable-next-line unicorn/prefer-spread
+  let newText = node.innerHTML.slice();
+
+  for (const word of words) {
+    if (phraseChanges[word]) {
+      newText = newText.replace(word, phraseChanges[word]);
+    }
+  }
 
   if (newText !== node.innerHTML) {
     node.innerHTML = newText;
