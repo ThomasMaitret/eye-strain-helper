@@ -1,3 +1,6 @@
+// eslint-disable-next-line unicorn/prefer-module
+"use strict";
+
 function changeSubtitles() {
   const callback = () => {
     const subtitles = document.querySelector(".player-timedtext");

@@ -1,3 +1,6 @@
+// eslint-disable-next-line unicorn/prefer-module
+"use strict";
+
 chrome.runtime.onInstalled.addListener(() => {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
     chrome.declarativeContent.onPageChanged.addRules([
