@@ -7,6 +7,6 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "icons": { "128": "icon.png" },
+  "icons": { "128": "icon.webp" },
   "manifest_version": 2
 }
