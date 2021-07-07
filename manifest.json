@@ -1,16 +1,12 @@
 {
-  "name": "Netflix subtitles replacer",
+  "name": "Break reminder",
   "version": "1.0",
-  "description": "Netflix subtitles replacer",
-  "permissions": [
-    "tabs",
-    "storage",
-    "declarativeContent",
-    "https://*.netflix.com/"
-  ],
+  "description": "Break reminder",
+  "permissions": ["notifications"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
+  "icons": { "128": "icon.png" },
   "manifest_version": 2
 }

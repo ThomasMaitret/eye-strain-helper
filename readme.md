@@ -1,3 +1,3 @@
-# Netflix subtitle replacer
+# Break reminder
 
-Replace some words with others in Netflix subtitles
+Remind to take a break every 20 minutes

@@ -1,34 +1,13 @@
 // eslint-disable-next-line unicorn/prefer-module
 "use strict";
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
-    chrome.declarativeContent.onPageChanged.addRules([
-      {
-        conditions: [
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { hostSuffix: "netflix.com" },
-          }),
-        ],
-        actions: [new chrome.declarativeContent.ShowPageAction()],
-      },
-    ]);
-  });
-});
+const twenty_minutes_in_ms = 20 * 60 * 1000;
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === "complete" && tab.active) {
-    chrome.tabs.executeScript(
-      tabId,
-      {
-        file: "script.js",
-      },
-      () => {
-        const error = chrome.runtime.lastError;
-        if (error) {
-          "Error. Tab ID: " + tab.id + ": " + JSON.stringify(error);
-        }
-      }
-    );
-  }
-});
+setTimeout(() => {
+  chrome.notifications.create({
+    type: "basic",
+    title: "Fais une pause chef !",
+    message: "Repose un peu tes yeux",
+    iconUrl: "icon.png",
+  });
+}, twenty_minutes_in_ms);
