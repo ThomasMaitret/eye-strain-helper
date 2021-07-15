@@ -3,7 +3,7 @@
 
 const twenty_minutes_in_ms = 20 * 60 * 1000;
 
-setTimeout(() => {
+setInterval(() => {
   chrome.notifications.create({
     type: "basic",
     title: "Fais une pause chef !",
